@@ -1,0 +1,12 @@
+import cv2
+img = cv2.imread("input.jpg")
+gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+print("Original shape:", img.shape)
+print("Grayscale shape:", gray.shape)
+print("Height:", img.shape[0])
+print("Width:", img.shape[1])
+cv2.imshow("Original", img)
+cv2.imshow("Grayscale", gray)
+cv2.imwrite("output.png", gray)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
